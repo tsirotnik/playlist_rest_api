@@ -340,19 +340,7 @@ class API(object):
             record['playlist_shared_with_this_user'] = shared_with
 
         return record
-        return json.dumps(record, indent=4, separators=[',', ':'])
 
 
 if __name__ == "__main__":
-    api = API("Albin Jaye", "Albin Jaye")
-    id = api.playlist_add_empty()
-    api.playlist_add_song(id, 31)
-    api.playlist_share(id, 'Dipika Crescentia')
-    api.user_full_record()
-
-    print api.user_full_record()
-    print
-    print
-
-    api = API("Dipika Crescentia", "Dipika Crescentia")
-    print api.user_full_record()
+    pass
