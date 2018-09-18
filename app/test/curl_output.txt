@@ -1,0 +1,22 @@
+test_bad_request (__main__.TestRest) ... ok
+test_create_user (__main__.TestRest) ... ok
+test_create_user_as_unauthorized (__main__.TestRest) ... ok
+test_create_user_test_parameters (__main__.TestRest) ... ok
+test_delete_user (__main__.TestRest) ... ok
+test_delete_user_unauthorized (__main__.TestRest) ... ok
+test_full_dump (__main__.TestRest) ... ok
+test_full_integration (__main__.TestRest) ... ok
+test_get_all_users (__main__.TestRest) ... ok
+test_playlist_delete (__main__.TestRest) ... ok
+test_playlist_new (__main__.TestRest) ... ok
+test_playlist_share_and_unshare (__main__.TestRest) ... ok
+test_rename_user1 (__main__.TestRest) ... ok
+test_rename_user_to_existing_username (__main__.TestRest) ... ok
+test_song_add_to_playlist (__main__.TestRest) ... ok
+test_song_delete (__main__.TestRest) ... ok
+test_song_list (__main__.TestRest) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.117s
+
+OK

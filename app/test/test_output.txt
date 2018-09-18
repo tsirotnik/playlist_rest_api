@@ -1,0 +1,20 @@
+test_assert_song_exists (__main__.Tests) ... ok
+test_assert_song_in_playlist (__main__.Tests) ... ok
+test_assert_song_not_exists (__main__.Tests) ... ok
+test_assert_song_not_in_playlist (__main__.Tests) ... ok
+test_assert_user_exists (__main__.Tests) ... ok
+test_assert_user_not_exists (__main__.Tests) ... ok
+test_assert_user_owns_playlist (__main__.Tests) ... ok
+test_playlist_add (__main__.Tests) ... ok
+test_playlist_add_song (__main__.Tests) ... ok
+test_playlist_delete_song (__main__.Tests) ... ok
+test_song_exists (__main__.Tests) ... ok
+test_song_in_playlist (__main__.Tests) ... ok
+test_user_delete (__main__.Tests) ... ok
+test_user_id (__main__.Tests) ... ok
+test_user_rename (__main__.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.707s
+
+OK
