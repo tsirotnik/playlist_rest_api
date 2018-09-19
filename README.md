@@ -1,4 +1,4 @@
-## Overview
+﻿## Overview
 
 This is an example REST server for playlist sharing.  It will enable you to:
 
@@ -127,8 +127,54 @@ Most exceptions are caught and translated into response codes in **app/playlist.
 
 > see [REST_EXAMPLES.md](REST_EXAMPLES.md) for more examples
 
+**list all users**
 
+- URL : /user
+- Method : GET
+- URL Params : auth_token, user
 
+*Ex: user named Albin Jay gets the list of users, Albin Jaye must authenticate with the admin token because only admins can get the list of users*
+
+    curl -X GET \
+    -d '{"auth_token": "admin_auth_token", "user": "Albin Jaye"}' \
+    http://35.166.169.63/user \
+    --header "Content-Type:application/json"
+
+    return code: 200
+    return json:
+    {
+    "status":"ok",
+    "data":{
+    "users":[
+    {
+    "id":1,
+    "name":"Albin Jaye"
+    }, ...
+
+**list all songs**
+
+- URL : /song
+- Method : GET
+- URL Params : auth_token, user
+
+*Ex: user Albin Jaye wants a list of all the songs*
+
+    curl -X GET \
+    -d '{"auth_token": "Albin Jaye", "user": "Albin Jaye"}' \
+    http://35.166.169.63/song \
+    --header "Content-Type:application/json"
+
+    return code: 200
+    return json:
+    {
+    "status":"ok",
+    "data":[
+    {
+    "artist":"Camila Cabello",
+    "id":1,
+    "title":"Never Be the Same"
+    },...
+    
 **add user**
 
 - URL : /user
@@ -148,7 +194,6 @@ Most exceptions are caught and translated into response codes in **app/playlist.
     "status":"ok",
     "data":"user added"
     }
-
 
 
 **delete user**
@@ -191,53 +236,6 @@ Most exceptions are caught and translated into response codes in **app/playlist.
     "data":"user renamed"
     }
 
-**list all users**
-
-- URL : /user
-- Method : GET
-- URL Params : auth_token, user
-
-*Ex: user: george gets the list of users, george must authenticate with the admin token because only admins can get the list of users*
-
-    curl -X GET \
-    -d '{"auth_token": "admin_auth_token", "user": "george"}' \
-    http://35.166.169.63/user \
-    --header "Content-Type:application/json"
-
-    return code: 200
-    return json:
-    {
-    "status":"ok",
-    "data":{
-    "users":[
-    {
-    "id":1,
-    "name":"Albin Jaye"
-    }, ...
-
-**list all songs**
-
-- URL : /song
-- Method : GET
-- URL Params : auth_token, user
-
-*Ex: user carl wants a list of all the songs*
-
-    curl -X GET \
-    -d '{"auth_token": "carl", "user": "carl"}' \
-    http://35.166.169.63/song \
-    --header "Content-Type:application/json"
-
-    return code: 200
-    return json:
-    {
-    "status":"ok",
-    "data":[
-    {
-    "artist":"Camila Cabello",
-    "id":1,
-    "title":"Never Be the Same"
-    },...
 
 **create a playlist**
 
@@ -319,7 +317,7 @@ Most exceptions are caught and translated into response codes in **app/playlist.
     "data":"song removed from playlist"
     }
 
-** list songs in playlist **
+**list songs in playlist**
 
 - URL : /playlist_songs
 - Method : GET
