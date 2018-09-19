@@ -133,7 +133,7 @@ Most exceptions are caught and translated into response codes in **app/playlist.
 - Method : GET
 - URL Params : auth_token, user
 
-*Ex: user named Albin Jay gets the list of users, Albin Jaye must authenticate with the admin token because only admins can get the list of users*
+*Ex: user named Albin Jaye gets the list of users, Albin Jaye must authenticate with the admin token because only admins can get the list of users*
 
     curl -X GET \
     -d '{"auth_token": "admin_auth_token", "user": "Albin Jaye"}' \
@@ -174,7 +174,7 @@ Most exceptions are caught and translated into response codes in **app/playlist.
     "id":1,
     "title":"Never Be the Same"
     },...
-    
+
 **add user**
 
 - URL : /user
